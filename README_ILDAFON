@@ -1,0 +1,13 @@
+THe original project unfortunately doesn't built successfull by defaul. 
+Here is some fixes to start project
+- I use Scenario 1 (DebugLocal) at first (Conference.NoAzureSDK.sln)
+- Change connection string to SQL Express Local DB from ".\sqlexpress;" to "(localdb)\MSSQLLocalDB;" in hole solution
+- Set Startup Projects : Conference.Web.Admin, Conference.Web.Public, WorkerRoleCommandProcessor
+- After Successull start NoAzureSDK, create conference, reservations
+- Open Conference.sln
+- Add <package id="AzureSDK2.2DLLs" version="1.0.0" targetFramework="net40" /> to packages.config
+- add toString() to var cloudStorageAccount on Error	CS1503	Argument 1: cannot convert from 'Microsoft.WindowsAzure.CloudStorageAccount'
+    to 'string'	WorkerRoleCommandProcessor	F:\cqrs-journey\source\WorkerRoleCommandProcessor\WorkerRole.cs	179	Active
+    
+    
+
