@@ -176,7 +176,7 @@ namespace WorkerRoleCommandProcessor
             config.Logs.ScheduledTransferPeriod = transferPeriod;
             config.Logs.ScheduledTransferLogLevelFilter = logLevel;
 
-            DiagnosticMonitor.Start(cloudStorageAccount, config);
+            DiagnosticMonitor.Start(cloudStorageAccount.ToString(), config);
 
             Trace.Listeners.Add(new Microsoft.WindowsAzure.Diagnostics.DiagnosticMonitorTraceListener());
             Trace.AutoFlush = true;
